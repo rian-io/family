@@ -11,7 +11,7 @@ class PersonOut(BaseModel):
     name: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
     def __repr__(self):
         return f"<PersonOut(id={self.id}, name='{self.name}')>"
