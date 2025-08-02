@@ -1,0 +1,15 @@
+POST http://localhost:8000/person/ HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Beltrano de Tal",
+  "cpf": "12345678903"
+}
+
+GET http://localhost:8000/person HTTP/1.1
+
+GET http://localhost:8000/person/1 HTTP/1.1
+
+DELETE http://localhost:8000/person/2 HTTP/1.1
+
+GET http://localhost:8000 HTTP/1.1
