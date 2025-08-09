@@ -1,15 +1,28 @@
-POST http://localhost:8000/person/ HTTP/1.1
+POST http://localhost:8000/user/ HTTP/1.1
+Authorization: Bearer <your_token_here>
 content-type: application/json
 
 {
   "name": "Beltrano de Tal",
-  "cpf": "12345678903"
+  "phone": "(99)999999999",
+  "password": "password1"
 }
 
-GET http://localhost:8000/person HTTP/1.1
+GET http://localhost:8000/user HTTP/1.1
+Authorization: Bearer <your_token_here>
 
-GET http://localhost:8000/person/1 HTTP/1.1
+GET http://localhost:8000/user/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwibmFtZSI6IkJlbHRyYW5vIGRlIFRhbCIsImV4cCI6MTc1NDgwNzcxOH0.PPH9CdVWYdVE2uiXMgfokYXpZTcJy5W3qWEQJEEHjP8
 
-DELETE http://localhost:8000/person/2 HTTP/1.1
+DELETE http://localhost:8000/user/2 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwibmFtZSI6IkJlbHRyYW5vIGRlIFRhbCIsImV4cCI6MTc1NDgwNzcxOH0.PPH9CdVWYdVE2uiXMgfokYXpZTcJy5W3qWEQJEEHjP8
 
 GET http://localhost:8000 HTTP/1.1
+
+POST http://localhost:8000/login HTTP/1.1
+content-type: application/json
+
+{
+  "phone": "(99)999999999",
+  "password": "password1"
+}

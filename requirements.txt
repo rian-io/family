@@ -4,3 +4,5 @@ pydantic
 sqlalchemy
 alembic
 databases
+pyjwt
+passlib[bcrypt]
