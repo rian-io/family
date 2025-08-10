@@ -17,12 +17,14 @@ router = APIRouter()
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
+
 
 @router.post("/login")
 def login(data: LoginRequest, db: Session = Depends(get_db)):
